@@ -7,16 +7,12 @@
 
 No local LaTeX installation is required. Everything compiles inside Docker.
 
----
-
 ## Step 1: Install LaTeX Workshop in VS Code
 
 1. Open VS Code
 2. Press `Ctrl+Shift+X` to open the Extensions panel
 3. Search for **LaTeX Workshop** (author: James Yu)
 4. Click **Install**
-
----
 
 ## Step 2: Install and Set Up Docker Desktop
 
@@ -60,8 +56,6 @@ Expected output (version may differ):
 Docker version 29.4.0, build 9d7ad9f
 ```
 
----
-
 ## Step 3: Pull the LaTeX Docker Image
 
 Open PowerShell and run:
@@ -71,8 +65,6 @@ docker pull texlive/texlive:latest
 ```
 
 > This downloads ~5 GB and is only needed once. Make sure Docker Desktop is running before this step.
-
----
 
 ## Step 4: Configure VS Code Settings
 
@@ -112,8 +104,6 @@ docker pull texlive/texlive:latest
 
 > **Why `docker` as the command?** LaTeX Workshop's built-in Docker mode does not work reliably on Windows. This configuration calls `docker run` directly, which works on all platforms.
 
----
-
 ## Step 5: Open the Project
 
 ```powershell
@@ -122,8 +112,6 @@ code "D:\Project\main.tex"
 
 Or in VS Code: `File → Open Folder` → select the project folder.
 
----
-
 ## Step 6: Open Live Preview
 
 1. Open `main.tex` in VS Code
@@ -131,8 +119,6 @@ Or in VS Code: `File → Open Folder` → select the project folder.
 3. LaTeX Workshop automatically triggers the first build
 
 > The first compile takes ~15 seconds (Docker startup). Subsequent saves are faster (~5–8 seconds).
-
----
 
 ## Step 7: Edit and Preview Live
 
@@ -149,8 +135,6 @@ Or in VS Code: `File → Open Folder` → select the project folder.
 | `Ctrl+Alt+B` | Manually trigger build |
 | `Ctrl+Alt+J` | Jump from source to PDF location |
 | `Ctrl+Click` on PDF | Jump back to the source line |
-
----
 
 ## Troubleshooting
 
@@ -169,28 +153,6 @@ Or in VS Code: `File → Open Folder` → select the project folder.
 **Build not triggering on save**
 > Verify that `"latex-workshop.latex.autoBuild.run": "onSave"` is present in your settings, then reload VS Code with `Ctrl+Shift+P → Reload Window`.
 
----
+##   For every time after (daily use):
 
-## License
-
-MIT License
-
-Copyright (c) 2026 Ngorn Panha
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+> `That's it VS Code auto-builds on save, no other commands needed.`
