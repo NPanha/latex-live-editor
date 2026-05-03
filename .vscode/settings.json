@@ -1,0 +1,27 @@
+{
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "docker",
+            "args": [
+                "run", "--rm",
+                "-v", "%DIR%:/workdir",
+                "-w", "/workdir",
+                "texlive/texlive:latest",
+                "pdflatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex x2",
+            "tools": ["pdflatex", "pdflatex"]
+        }
+    ]
+}

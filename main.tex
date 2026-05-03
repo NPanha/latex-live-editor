@@ -1,0 +1,138 @@
+\documentclass[12pt, a4paper]{report}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{lipsum}
+
+% Page layout
+\geometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3cm,
+    right=2.5cm
+}
+
+\doublespacing
+
+% Metadata
+\title{\textbf{Thesis Title Here}\\
+    \large Subtitle or Research Question}
+\author{Your Name\\
+    \small Institution Name}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% Abstract
+\begin{abstract}
+    This is the abstract of the thesis. It provides a brief summary of the research,
+    methodology, findings, and conclusions. Replace this text with your actual abstract.
+    The abstract should be concise, typically 150--300 words.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% Chapter 1
+\chapter{Introduction}
+
+\section{Background}
+This is the introduction chapter. Here you provide background information about the
+research topic, the problem statement, and the significance of the study.
+
+\lipsum[1]
+
+\section{Research Objectives}
+\begin{enumerate}
+    \item First objective of the research.
+    \item Second objective of the research.
+    \item Third objective of the research.
+\end{enumerate}
+
+\section{Scope and Limitations}
+\lipsum[2]
+
+% Chapter 2
+\chapter{Literature Review}
+
+\section{Overview}
+This chapter reviews existing literature relevant to the research topic.
+
+\lipsum[3-4]
+
+\section{Theoretical Framework}
+A key equation in this research:
+\begin{equation}
+    E = mc^2
+\end{equation}
+
+where $E$ is energy, $m$ is mass, and $c$ is the speed of light.
+
+% Chapter 3
+\chapter{Methodology}
+
+\section{Research Design}
+\lipsum[5]
+
+\section{Data Collection}
+\lipsum[6]
+
+\section{Analysis}
+An example table:
+
+\begin{table}[h]
+    \centering
+    \caption{Sample Data Table}
+    \begin{tabular}{lcc}
+        \toprule
+        Variable & Group A & Group B \\
+        \midrule
+        Metric 1 & 42.3 & 38.7 \\
+        Metric 2 & 15.1 & 17.4 \\
+        Metric 3 & 99.0 & 95.2 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:sample}
+\end{table}
+
+% Chapter 4
+\chapter{Results and Discussion}
+
+\section{Results}
+\lipsum[7]
+
+\section{Discussion}
+\lipsum[8]
+
+% Chapter 5
+\chapter{Conclusion}
+
+\section{Summary}
+\lipsum[9]
+
+\section{Future Work}
+\lipsum[10]
+
+% Bibliography placeholder
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+
+\begin{enumerate}
+    \item Author, A. (2024). \textit{Book Title}. Publisher.
+    \item Author, B., \& Author, C. (2023). Article title. \textit{Journal Name}, 10(2), 1--15.
+\end{enumerate}
+
+\end{document}
